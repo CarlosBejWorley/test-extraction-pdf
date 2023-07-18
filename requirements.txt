@@ -1,0 +1,12 @@
+camelot-py[cv]
+PDF
+wand
+PyMuPDF
+pytesseract
+pdf2image
+ghostscript
+opencv-python
+tabula-py
+tabulate
+pandas
+pypdf2
