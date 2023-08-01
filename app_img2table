@@ -1,0 +1,19 @@
+from img2table.document import PDF
+from img2table.ocr import PaddleOCR
+
+# Instantiation of document
+doc = PDF("../PDF feature/test-extraction-pdf/pdf/EDS.pdf", 
+          pages=[0, 2],
+          detect_rotation=False,
+          pdf_text_extraction=True)
+
+# Instantiation of OCR
+ocr = PaddleOCR(lang="en")
+
+# Table extraction
+extracted_tables = doc.extract_tables(ocr=ocr,
+                                      implicit_rows=False,
+                                      borderless_tables=False,
+                                      min_confidence=50)
+
+print(extracted_tables) 
